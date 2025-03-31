@@ -1,26 +1,27 @@
-def calculator():
-    try:
-        num1 = float(input("Enter the first number: "))
-        num2 = float(input("Enter the second number: "))
-        operation = input("Enter an operation (+, -, *, /): ")
+def list_operations():
+    my_list = []  # Create an empty list
+    
+    # Append elements
+    my_list.append(10)
+    my_list.append(20)
+    my_list.append(30)
+    my_list.append(40)
+    
+    # Insert 15 at the second position
+    my_list.insert(1, 15)
+    
+    # Extend list with another list
+    my_list.extend([50, 60, 70])
+    
+    # Remove the last element
+    my_list.pop()
+    
+    # Sort the list in ascending order
+    my_list.sort()
+    
+    # Find and print the index of 30
+    index_30 = my_list.index(30)
+    print(f"Sorted List: {my_list}")
+    print(f"Index of 30: {index_30}")
 
-        if operation == '+':
-            result = num1 + num2
-        elif operation == '-':
-            result = num1 - num2
-        elif operation == '*':
-            result = num1 * num2
-        elif operation == '/':
-            if num2 == 0:
-                print("Error: Division by zero is not allowed.")
-                return
-            result = num1 / num2
-        else:
-            print("Invalid operation. Please enter +, -, *, or /.")
-            return
-        
-        print(f"{num1} {operation} {num2} = {result}")
-    except ValueError:
-        print("Invalid input. Please enter numeric values.")
-
-calculator()
+list_operations()
